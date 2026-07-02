@@ -13,7 +13,7 @@ DATA_DIR = os.path.join(PROJECT_ROOT, "data")
 
 class VectorStore:
     def __init__(self, model_name: str = "all-MiniLM-L6-v2"):
-        self.model = SentenceTransformer(model_name)
+        self.model = SentenceTransformer(model_name, device="cpu")
         self.catalog_path = os.path.join(DATA_DIR, "shl_catalog.json")
         self.index_path = os.path.join(DATA_DIR, "faiss_index")
         self.documents_path = os.path.join(DATA_DIR, "documents.json")
@@ -68,7 +68,7 @@ class VectorStore:
         with open(self.documents_path, "w", encoding="utf-8") as f:
             json.dump(self.documents, f, indent=2, ensure_ascii=False)
 
-    def retrieve(self, query: str, top_k: int = 10) -> List[Dict]:
+    def retrieve(self, query: str, top_k: int = 12) -> List[Dict]:
         query_embedding = self.model.encode([query], convert_to_numpy=True)
         distances, indices = self.index.search(query_embedding, top_k)
         results = []

@@ -504,3 +504,8 @@ Structured JSON
 | Leadership/Communication Skills | 0.2941 |
 | Coding/Aptitude (Entry-Level) | 0.1579 |
 | **Mean Recall@10** | 0.4304 |
+
+### How to Re-run Evaluation
+```powershell
+python evaluate_project.py
+```

@@ -173,7 +173,7 @@ IMPORTANT: ONLY use the EXACT assessment names and URLs from the provided catalo
                 "end_of_conversation": False
             }
         
-        results = self.vector_store.retrieve(all_user_text, top_k=12)
+        results = self.vector_store.retrieve(all_user_text, top_k=20)
         final_results = results[:6]
         
         recommendations = []
