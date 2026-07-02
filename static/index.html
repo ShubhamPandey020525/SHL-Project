@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHL Assessment Recommender</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon">SHL</div>
+                    <div class="logo-text">
+                        <h1>Assessment Recommender</h1>
+                        <p>Find the perfect SHL assessments for your hiring needs</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Chat Container -->
+        <div class="chat-container" id="chatContainer">
+            <div class="messages" id="messages">
+                <div class="welcome-message" id="welcomeMessage">
+                    <div class="welcome-icon">🎯</div>
+                    <h1>Welcome!</h1>
+                    <p>Tell us about the role you're hiring for, and we'll recommend the perfect SHL assessments!</p>
+                    <div class="quick-suggestions">
+                        <button class="quick-suggestion-btn" data-query="Hiring a Java developer with 3 years experience">
+                            <span class="suggestion-icon">💻</span>
+                            <span>Java Developer</span>
+                        </button>
+                        <button class="quick-suggestion-btn" data-query="Personality assessments for mid-level managers">
+                            <span class="suggestion-icon">👔</span>
+                            <span>Managers</span>
+                        </button>
+                        <button class="quick-suggestion-btn" data-query="Entry-level coding and aptitude tests">
+                            <span class="suggestion-icon">📊</span>
+                            <span>Entry Level</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Container -->
+        <div class="input-container">
+            <div class="input-wrapper">
+                <div class="input-area">
+                    <textarea 
+                        id="userInput" 
+                        placeholder="Describe the role, experience level, or skills you need..."
+                        rows="1"
+                    ></textarea>
+                </div>
+                <button id="sendBtn" class="send-btn" disabled>
+                    <svg class="send-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <p class="input-hint">Press Enter to send, Shift+Enter for new line</p>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
