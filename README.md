@@ -3,6 +3,8 @@
 
 A conversational AI agent that helps users find the right SHL Individual Test Solutions through natural dialogue. This project is a take-home assignment for the SHL Labs AI Intern role.
 
+🔗 **Live Demo**: https://shlchatbot-lm79.onrender.com
+
 ## 🚀 Quick Start
 Follow these 3 steps to get up and running in 2 minutes:
 
